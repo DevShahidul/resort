@@ -30,7 +30,7 @@ export default class SingleRoom extends Component {
             )
         }
 
-        const {name, description, images, price, size, breackfast, pets, extras, capacity, type} = room
+        const {name, description, images, price, size, breakfast, pets, extras, capacity} = room
         const [mainImage, ...defaultImages] = images;
         return (
             <>
@@ -50,12 +50,11 @@ export default class SingleRoom extends Component {
                         </article>
                         <article className="info">
                             <h3>Infos</h3>
-                            <h6>Type: {type ? type : "general"}</h6>
                             <h6>Price: ${price}</h6>
                             <h6>Size: {size} SQFT</h6>
                             <h6>Max Capacity: {capacity < 1 ? `${capacity} people` : `${capacity} person`}</h6>
                             <h6>{pets ? "Pets Allowed" : "Not Pets Allowed"}</h6>
-                            <h6>{breackfast && "Free breackfast included"}</h6>
+                            {breakfast && <h6>Free breackfast included</h6>}
                         </article>
                     </div>
                 </section>
