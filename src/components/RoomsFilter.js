@@ -11,8 +11,6 @@ export const RoomsFilter = ({rooms}) => {
     
     const {
         handleChange,
-        type,
-        capacity,
         price,
         minPrice,
         maxPrice,
